@@ -95,6 +95,32 @@ header.site-nav .wrap {
 }
 .nav-toggle { display: none; }
 
+@media (max-width: 640px) {
+  header.site-nav .wrap {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 14px 0 14px 24px;
+  }
+  .site-nav .brand {
+    flex-shrink: 0;
+  }
+  .site-nav nav {
+    flex: 1;
+    min-width: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 20px;
+    padding-right: 24px;
+  }
+  .site-nav nav::-webkit-scrollbar { display: none; }
+  .site-nav nav a {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
+
 /* ---------- page shell ---------- */
 main {
   padding: var(--gap) 0 120px;
@@ -281,8 +307,21 @@ footer.site-foot a:hover { color: var(--blue-dark); }
   height: 720px;
   border: none;
 }
+.pdf-mobile-open { display: none; }
 @media (max-width: 700px) {
-  .pdf-frame iframe { height: 480px; }
+  .sheet-box.pdf-frame { display: none; }
+  .pdf-mobile-open {
+    display: block;
+    margin-top: 28px;
+    text-align: center;
+    border: 1px solid var(--line);
+    padding: 36px 20px;
+  }
+  .pdf-mobile-hint {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--dim);
+  }
 }
 .intro-block { text-align: center; }
 .intro-block h1.page-title { margin-bottom: 6px; }
