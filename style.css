@@ -208,6 +208,7 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: var(--gap) 0;
   border-top: 1px solid var(--line);
 }
 .project-list .project-card:first-child { border-top: none; padding-top: 0; }
+.project-card.align-center { align-items: center; }
 .project-card .thumb {
   width: 200px;
   height: 150px;
@@ -234,16 +235,15 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: var(--gap) 0;
 .project-card .tags { margin-top: 12px; font-size: 12.5px; color: var(--dim); }
 
 .project-card .thumb-pair {
-  width: 200px;
-  height: 150px;
   display: flex;
-  gap: 4px;
+  flex-direction: column;
+  gap: 8px;
   flex-shrink: 0;
 }
 .project-card .thumb-pair img {
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
   background: #ffffff;
   border: 1px solid var(--line);
 }
@@ -252,7 +252,7 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: var(--gap) 0;
   .project-card { flex-direction: column; }
   .project-card .thumb { width: 100%; height: 200px; }
   .project-card .thumb.tall { height: 260px; }
-  .project-card .thumb-pair { width: 100%; height: 200px; }
+  .project-card .thumb-pair img { width: 100%; height: 200px; }
 }
 .project-card .thumb.tall { height: 260px; }
 
